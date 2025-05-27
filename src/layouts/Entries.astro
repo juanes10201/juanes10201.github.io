@@ -1,0 +1,102 @@
+---
+import '../styles/global.css';
+import '../styles/entries.css';
+
+import gradient from '../assets/entries/gradient.png';
+---
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+
+<meta charset="UTF-8" />
+
+<!doctype html>
+<html lang="en">
+	<div id="entries_background"/>
+	<img id="gradient" src={gradient.src}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Juanes</title>
+	</head>
+	<body>
+		<div class="square"></div>
+		<slot />
+	</body>
+	</div>
+</html>
+
+<script>
+	//Convert the image descriptions to texts below
+	document.addEventListener("DOMContentLoaded", () => {
+		document.querySelectorAll("img[alt]").forEach(img => {
+			const altText = img.getAttribute("alt");
+			if (altText) {
+				//Custom carousel like images
+				if(altText == "!image_layout_next"){
+					const figure = document.createElement("figure");
+					figure.classList.add("image_layout_next");
+					
+					img.replaceWith(figure);
+					img.appendChild(img);
+				}
+				else if(altText.charAt(0) == '!'){
+					
+					const figure = document.createElement("figure");
+					const figCaption = document.createElement("figcaption");
+
+					//Css
+					figure.classList.add("italic");
+					figCaption.classList.add("image_layout_center");
+
+					figCaption.innerText = altText.slice(1)
+					
+					img.replaceWith(figure);
+					figure.appendChild(img);
+					figure.appendChild(figCaption);
+				}
+				else{
+					const figure = document.createElement("figure");
+					const figCaption = document.createElement("figcaption");
+
+					//Css
+					figure.classList.add("image");
+					figure.classList.add("image_with_caption");
+					figCaption.classList.add("image");
+					figCaption.classList.add("image_caption");
+
+					figCaption.innerText = altText;
+					
+					img.replaceWith(figure);
+					figure.appendChild(img);
+					figure.appendChild(figCaption);
+				}
+			}
+			else {
+				const figure = document.createElement("figure");
+				figure.classList.add("image_no_captions");
+
+				img.replaceWith(figure);
+				figure.appendChild(img);
+			}
+		});
+	});
+
+</script>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>

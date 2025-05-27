@@ -1,0 +1,96 @@
+body {
+    color: #303030;
+	font-family: "Space Grotesk";
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+
+	max-width: 1500px;
+
+	padding: 50px 50px 50px 50px;
+}
+
+img {
+	border-radius: 10px;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.image_layout_next {
+	display: inline;
+	align-items: center;
+	gap: 1rem;
+
+	margin: 50px;
+	padding: 20px;
+    height: auto; /* maintain aspect ratio */
+
+	font-style: italic;
+}
+
+.image {
+	display: block;
+	align-items: center;
+	gap: 1rem;
+
+	float: right;
+	margin-left: 40px;
+	padding: 0px;
+	width: 400px; /* or try max-width: 200px; */
+    height: auto; /* maintain aspect ratio */
+
+	font-style: italic;
+}
+
+.image_no_captions {
+	float: right;
+	margin : 40px;
+}
+
+#entries_background {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100000%;
+		height: 100000%;
+		z-index: -1;
+		background: #F0F0F0;
+		background-image: url('../assets/grid.jpg');
+		background-repeat: repeat;
+		/* filter: blur(100px); */
+	}
+
+#gradient {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 900px;
+		bottom: 0;
+		width: 100000%;
+		height: 10%;
+		background-repeat: repeat-x;
+	}
+
+.square {
+	position: absolute;
+	top: 10;
+	left: 0;
+	width: 1650px;
+	height: 500vh;
+	z-index: -1;
+	background-color: #ffffff;
+  	padding: 17px;
+	overflow: auto;
+}
+
+h1 {
+	color: #303030;
+	font-family: "Kalnia";
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
