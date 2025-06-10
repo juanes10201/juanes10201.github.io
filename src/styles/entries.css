@@ -1,7 +1,7 @@
 body {
     color: #303030;
 	font-family: "Space Grotesk";
-	font-size: 25px;
+	font-size: clamp(1rem, 2vw, 25px);
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
@@ -45,6 +45,24 @@ img {
 	font-style: italic;
 }
 
+@media (max-width: 768px) {
+  .image {
+		float: none;
+		display: block;
+		margin: 1rem auto;
+		width: 100%;
+		max-width: 100%;
+	}
+	.image_no_captions {
+		float: none;
+		display: block;
+		margin: 1rem auto;
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+
 .image_no_captions {
 	float: right;
 	margin : 40px;
@@ -65,13 +83,13 @@ img {
 
 #gradient {
 		position: fixed;
-		left: 0;
-		right: 0;
-		top: 900px;
 		bottom: 0;
-		width: 100000%;
-		height: 10%;
-		background-repeat: repeat-x;
+		left: 0;
+		width: 100vw;
+		height: 100px;
+		background: linear-gradient(to top, rgba(255, 255, 255, 0.5), transparent);
+		pointer-events: none;
+		z-index: 999;
 	}
 
 .square {
@@ -89,7 +107,7 @@ img {
 h1 {
 	color: #303030;
 	font-family: "Kalnia";
-	font-size: 64px;
+	font-size: clamp(1rem, 5vw, 64px);
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;

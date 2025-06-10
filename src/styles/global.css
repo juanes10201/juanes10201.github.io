@@ -16,7 +16,7 @@
 	#grid_background {
 		position: absolute;
 		left: 0;
-		width: 100000%;
+		width: 100rem;
 		height: 70%;
 		z-index: -1;
 		background: #F0F0F0;
