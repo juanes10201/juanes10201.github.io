@@ -71,5 +71,4 @@ To be honest, it doesn't have a arcady retro style, when i made it i wanted it t
 
 # Final result
 ![!image_layout_next](/images/Arcade1.png)
-![!image_layout_next](/images/Arcade1.png)
 ![!image_layout_next](/images/Arcade3.png)

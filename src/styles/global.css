@@ -135,7 +135,7 @@
 		font-weight: 500;
 		line-height: normal;
 	}
-
+	
 	.pixelbox {
 		font-family: "Pixelify Sans";
 		font-size: 25px;
@@ -177,3 +177,162 @@
 		white-space: normal;
 		word-break: break-word;
 	}
+
+	.Stem-column{
+		display: flex; gap: 1rem;
+		padding: 10px 10px 0px 0px;
+		flex-direction: column;
+	}
+
+	.Stem-main-column{
+		display: flex;
+		gap: 1rem;
+		padding: 10px 10px 0px 0px;
+		align-items: flex-end;
+	}
+
+	.tiny-stem-achivement{
+		width: 302px;
+		height: 212px;
+		margin: 0px 0px 10px 10px;
+	}
+
+	/* === Responsive Design === */
+
+
+
+@media (max-width: 480px) {
+
+	.tiny-stem-achivement{
+		width: 572px;
+		height: 400px;
+		margin: 10px 0px 10px 10px;
+	}
+
+	.Stem-column{
+		display: flex; gap: 1rem;
+		padding: 10px 10px 0px 0px;
+		flex-direction: row;
+	}
+	.Stem-main-column{
+		display: flex;
+		gap: 1rem;
+		padding: 10px 10px 0px 0px;
+		align-items: flex-end;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.text-box {
+		max-width: 1092px;
+	}
+
+	.regular-text {
+		white-space: pre-line;
+		color: #303030;
+		font-family: "Space Grotesk";
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 40px;
+	}
+	.light-text {
+		white-space: pre-line;
+		color: #303030;
+		font-family: "Space Grotesk";
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 40px;
+	}
+
+	.bold {
+		white-space: pre-line;
+		color: #303030;
+		font-family: "Space Grotesk";
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 40px;
+	}
+
+	.header{
+		color: #303030;
+		font-family: "Kalnia";
+		font-size: 120px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		white-space: nowrap;
+	}
+	.sub-header{
+		color: #303030;
+		font-family: "Kalnia";
+		font-size: 60px;
+		font-style: normal;
+		font-weight: 500;
+		max-width: 700px;
+		line-height: normal;
+	}
+	.red-header {
+		font-family: "Kalnia";
+		font-weight: bold;
+		text-align: center;
+		color: #FF4A4A;
+  		font-size: 300px;
+		margin-bottom: 0px; /* reducí esto según lo que necesites */
+		line-height: 1;
+		margin-bottom: .4em;
+    	white-space: nowrap;
+	}
+	.big-header {
+		font-family: "Kalnia";
+		color: #303030;
+		font-size: 320px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+	}
+	
+	.pixelbox {
+		font-family: "Pixelify Sans";
+		font-size: 45px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		text-decoration: none;
+		border-radius: 20px;
+		background: #000000;
+		box-shadow: 4px 4px 3px 0px rgba(0, 0, 0, 0.25);
+		color: #FFFFFF;
+		padding: 250px 30px 20px 20px;
+		width: 400px;
+		flex-shrink: 0;
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+
+	a.button {
+		text-decoration: none;
+		border-radius: 20px;
+		background: #D9D9D9;
+		box-shadow: 4px 4px 3px 0px rgba(0, 0, 0, 0.25);
+		color: black;
+		padding: 20px 18px;
+		width: 450px;
+		height: 200px;
+		flex-shrink: 0;
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+
+	.button-text {
+		max-width: 340px;
+		white-space: normal;
+		word-break: break-word;
+	}
+}

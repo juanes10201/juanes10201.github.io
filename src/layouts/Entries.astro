@@ -41,12 +41,9 @@ import gradient from '../assets/entries/gradient.png';
 			const altText = img.getAttribute("alt");
 			if (altText) {
 				//Custom carousel like images
+				console.log(altText);
 				if(altText == "!image_layout_next"){
-					const figure = document.createElement("figure");
-					figure.classList.add("image_layout_next");
-					
-					img.replaceWith(figure);
-					img.appendChild(img);
+					img.classList.add("image_layout_next");
 				}
 				else if(altText.charAt(0) == '!'){
 					
@@ -55,7 +52,8 @@ import gradient from '../assets/entries/gradient.png';
 
 					//Css
 					figure.classList.add("italic");
-					figCaption.classList.add("image_layout_center");
+					img.classList.add("image_layout_center");
+					figCaption.classList.add("image_layout_text_center");
 
 					figCaption.innerText = altText.slice(1)
 					
@@ -68,8 +66,8 @@ import gradient from '../assets/entries/gradient.png';
 					const figCaption = document.createElement("figcaption");
 
 					//Css
-					figure.classList.add("image");
-					figure.classList.add("image_with_caption");
+					img.classList.add("image");
+					img.classList.add("image_with_caption");
 					figCaption.classList.add("image");
 					figCaption.classList.add("image_caption");
 

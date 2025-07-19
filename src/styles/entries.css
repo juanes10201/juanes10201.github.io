@@ -20,15 +20,10 @@ img {
 }
 
 .image_layout_next {
-	display: inline;
-	align-items: center;
+	display: inline-block;
+  	vertical-align: middle;
 	gap: 1rem;
-
-	margin: 50px;
-	padding: 20px;
-    height: auto; /* maintain aspect ratio */
-
-	font-style: italic;
+	margin: 10px;
 }
 
 .image {
@@ -45,24 +40,6 @@ img {
 	font-style: italic;
 }
 
-@media (max-width: 768px) {
-  .image {
-		float: none;
-		display: block;
-		margin: 1rem auto;
-		width: 100%;
-		max-width: 100%;
-	}
-	.image_no_captions {
-		float: none;
-		display: block;
-		margin: 1rem auto;
-		width: 100%;
-		max-width: 100%;
-	}
-}
-
-
 .image_no_captions {
 	float: right;
 	margin : 40px;
@@ -72,8 +49,8 @@ img {
 		position: absolute;
 		left: 0;
 		top: 0;
-		width: 100000%;
-		height: 100000%;
+		width: 140%;
+		height: 1000%;
 		z-index: -1;
 		background: #F0F0F0;
 		background-image: url('../assets/grid.jpg');
@@ -96,8 +73,8 @@ img {
 	position: absolute;
 	top: 10;
 	left: 0;
-	width: 1650px;
-	height: 500vh;
+	width: 1600px;
+	height: 1000vh;
 	z-index: -1;
 	background-color: #ffffff;
   	padding: 17px;
@@ -107,8 +84,38 @@ img {
 h1 {
 	color: #303030;
 	font-family: "Kalnia";
-	font-size: clamp(1rem, 5vw, 64px);
+	font-size: clamp(1rem, 15vw, 64px);
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
+}
+
+@media (max-width: 480px) {
+	.square {
+		width: 500px;
+	}
+
+	.image_layout_center {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.image_layout_next {
+		width: 80%;
+		height: 80%;
+	}
+
+	.image {
+		display: block;
+		align-items: center;
+		gap: 1rem;
+
+		float: right;
+		margin-left: 40px;
+		padding: 0px;
+		width: 100px; /* or try max-width: 200px; */
+		height: auto; /* maintain aspect ratio */
+
+		font-style: italic;
+	}
 }
