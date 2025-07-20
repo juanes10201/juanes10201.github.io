@@ -40,10 +40,21 @@ img {
 	font-style: italic;
 }
 
+.image_caption {
+  display: block;      /* make sure it's block so width and alignment apply */
+  text-align: right;   /* align text to the right */
+  margin-top: 0.5rem;  /* space between image and caption */
+  font-style: italic;  /* optional styling */
+  width: 100%;         /* take full width of container */
+}
+
+
 .image_no_captions {
 	float: right;
 	margin : 40px;
 }
+
+
 
 #entries_background {
 		position: absolute;
